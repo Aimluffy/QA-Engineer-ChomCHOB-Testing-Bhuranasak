@@ -10,6 +10,7 @@
    - Robot framework Selenium Library 6.3.0
    - ChromeDriver
 Submit file name >> `testcase/nejavu.robot`
+Can Ctrl+C and Ctrl+V for run automate code on IDE here >> `robot testcase\nejavu.robot`
 
 ## Section 3: Automate Testing API Skills
 Can view complete documentation at link here >>>[Postman Test Document](https://documenter.getpostman.com/view/36299040/2sA3XWceEC/).
