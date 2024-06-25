@@ -1,26 +1,10 @@
-#testkeyword.robot create for test function in keywords if its work i will put to resource.robot and nejavu.robot
+#resource for automate test follow up with ChomCHOB requirement
 *** Settings ***
 Library    SeleniumLibrary
-Library    Collections
 
 *** Variables ***
 ${URL}    https://www.nejavu.com
 ${BROWSER}    Chrome
-
-*** Test Cases ***
-Nejavu Cartoon Books Test
-    Open Browser To Nejavu
-    Close Banner If Present
-    Clear Cart If Not Empty
-    Sleep    1s
-    Navigate To Cartoons Page
-    ${book_names}=    Get Book Names In First Row
-    Add All Books In First Row To Cart
-    Go To Cart Page
-    Verify Cart Contents    ${book_names}
-    Delete All Books From Cart
-    Verify Cart Badge Is Zero
-    [Teardown]    Close Browser
 
 *** Keywords ***
 Open Browser To Nejavu
@@ -56,11 +40,6 @@ Get Book Names In First Row
     END
     Log    Found book names: ${book_names}
     [Return]    ${book_names}
-
-Strip String
-    [Arguments]    ${string}
-    ${stripped_string}=    Evaluate    '${string}'.strip()
-    [Return]    ${stripped_string}
 
 Add All Books In First Row To Cart
     @{add_buttons}=    Get WebElements    xpath:(//div[contains(@class, 'nev-pd-card')])[position() <= 5]//form[@id='QuickCartRequestForm']//button[@id='quick-cart-button']
@@ -126,3 +105,6 @@ Delete All Books From Cart
 Verify Cart Badge Is Zero
     ${badge_text}=    Get Text    xpath://div[@id='badge-cart']
     Should Be Equal As Strings    ${badge_text}    0
+
+Close Browsers
+    SeleniumLibrary.Close All Browsers
