@@ -1,5 +1,5 @@
 #This Positive test case "nejavu.robot" is using resource from resources folder.
-#Bhuranasak (As known as Aimluffy in GitHub) code this test, who ever watch this comment if you are those taking the exam to work at ChomCHOB like me, please don't copy me. But you can use it as an idea ;).
+#Bhuranasak code this test
 #Thank you for checking my code.
 *** Settings ***
 Library    SeleniumLibrary
