@@ -4,10 +4,12 @@
 
 ## Section 2: Automate Testing WEB Skills
   - This test script require the following features:
-   - Python
-   - Selenium Library
+   - Python 3.11.3
+   - Selenium Library 4.20.0
    - Robot framework 7.0
-   - Robot framework Selenium Library 6.3.0
+   - Robot framework Seleniumlibrary 6.3.0
+   - Robot framework Selenium2Library 3.0.0
+   - Robot framework pythonlibcore 4.4.1
    - ChromeDriver
    Submit file name >> `testcase/nejavu.robot` <br />
    Can Ctrl+C and Ctrl+V for run automate code on IDE here >> `robot testcase\nejavu.robot`
